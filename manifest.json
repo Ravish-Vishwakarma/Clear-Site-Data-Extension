@@ -1,0 +1,36 @@
+{
+    "manifest_version": 3,
+    "name": "Auto Site Data Cleaner",
+    "version": "2.1",
+    "description": "Automatically clear cookies and site data for chosen sites.",
+    "permissions": [
+        "cookies",
+        "tabs",
+        "browsingData",
+        "storage",
+        "webNavigation"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_title": "Manage Auto-Clear Sites",
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "assets/logo-16.png",
+            "32": "assets/logo-32.png",
+            "48": "assets/logo-48.png",
+            "128": "assets/logo-128.png"
+        }
+    },
+    "icons": {
+        "16": "assets/logo-16.png",
+        "32": "assets/logo-32.png",
+        "34": "assets/logo-34.png",
+        "48": "assets/logo-48.png",
+        "128": "assets/logo-128.png"
+    }
+}

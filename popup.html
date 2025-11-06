@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f9fafb;
+            padding: 14px;
+            width: 300px;
+        }
+
+        h3 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .icon-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .icon-btn:hover {
+            background: #e0e7ff;
+        }
+
+        #controls {
+            display: flex;
+            gap: 6px;
+            margin-top: 10px;
+        }
+
+        input,
+        button {
+            padding: 7px 8px;
+            border-radius: 6px;
+            border: 1px solid #d1d5db;
+            font-size: 14px;
+        }
+
+        input {
+            flex: 1;
+        }
+
+        button {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background-color: #1e40af;
+        }
+
+        ul {
+            margin-top: 12px;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        li {
+            background: white;
+            margin-bottom: 6px;
+            padding: 6px 10px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .remove {
+            color: #dc2626;
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 8px;
+        }
+
+        .remove:hover {
+            color: #b91c1c;
+        }
+
+        .note {
+            font-size: 12px;
+            color: #6b7280;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>
+        Auto-Clear Sites
+        <button id="clearCurrent" class="icon-btn" title="Clear cookies and site data for the current site right now">
+            🧹
+        </button>
+    </h3>
+
+    <div id="controls">
+        <input id="siteInput" type="text" placeholder="example.com" />
+        <button id="addBtn">Add</button>
+    </div>
+    <button id="addCurrentBtn" style="margin-top:8px;width:100%;">Add Current Site</button>
+
+    <ul id="siteList"></ul>
+
+    <div class="note">Sites in this list are cleared automatically when opened.</div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
